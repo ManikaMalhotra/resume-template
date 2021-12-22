@@ -303,6 +303,26 @@ section:nth-child(2n + 1) {
     color: rgba(180, 230, 255, 1);
 }
 
+/* Managing Responsiveness - Timeline shifts to one side if viewport is small */
+@media screen and (max-width: 600px) {
+    .divide-timeline {
+        left: 5%;
+    }
+
+    .timeline-box {
+        left: 12%;
+        width: 80%;
+    }
+
+    .timeline-box:nth-child(2n) {
+        left: 12%;
+    }
+
+    .timeline-box::after {
+        left: -10% !important;
+    }
+}
+
 .designation {
     font-size: 1.4rem;
 }
